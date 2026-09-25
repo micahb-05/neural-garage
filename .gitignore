@@ -1,0 +1,11 @@
+# OS clutter
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# editor folders
+.vscode/
+.idea/
+
+# downloaded save files
+neural-garage-save_*.json

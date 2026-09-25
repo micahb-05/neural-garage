@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Neural Garage</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Silkscreen&family=Share+Tech+Mono&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="app">
+    <header id="hud">
+      <div class="brand">NEURAL<span>GARAGE</span></div>
+      <div class="stat"><span class="k">CASH</span><span class="v gold" id="hud-cash">$0</span></div>
+      <div class="stat"><span class="k">NET RATE</span><span class="v" id="hud-rate">$0/s</span></div>
+      <div class="stat"><span class="k">COMPUTE</span><span class="v cyan" id="hud-compute">0/0</span></div>
+      <div class="stat"><span class="k">GPU</span><span class="v cyan" id="hud-gpu">X1.00</span></div>
+      <div class="stat"><span class="k">REPUTATION</span><span class="v"><span id="hud-rep">0</span> <small id="hud-title"></small></span></div>
+      <div class="spacer"></div>
+      <button class="btn ghost" id="btn-save" title="Save, download or load your game">SAVE / LOAD</button>
+      <button class="btn ghost" id="btn-help" title="How to play">? HELP</button>
+      <button class="btn ghost" id="btn-mute">SOUND: ON</button>
+    </header>
+    <main>
+      <div id="stage">
+        <canvas id="world" width="512" height="288"></canvas>
+        <div id="toasts"></div>
+        <div id="tip" hidden></div>
+        <div id="coach" hidden></div>
+      </div>
+      <aside id="panel">
+        <nav id="tabs">
+          <button class="tab on" data-tab="bays">BAYS</button>
+          <button class="tab" data-tab="models">MODELS</button>
+          <button class="tab" data-tab="train">TRAIN</button>
+          <button class="tab" data-tab="upgrades">UPGRADES</button>
+          <button class="tab" data-tab="goals">GOALS</button>
+          <button class="tab" data-tab="story">STORY</button>
+        </nav>
+        <div id="panel-body"></div>
+      </aside>
+    </main>
+  </div>
+  <div id="modal" hidden></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/pixel.js"></script>
+  <script src="js/state.js"></script>
+  <script src="js/story.js"></script>
+  <script src="js/sim.js"></script>
+  <script src="js/audio.js"></script>
+  <script src="js/world.js"></script>
+  <script src="js/tutorial.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
